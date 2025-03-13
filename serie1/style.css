@@ -1,0 +1,13 @@
+.form1 input, button, select{
+    margin: 7px;
+    padding: 7px 25px;
+    border-radius: 10px;
+}
+.form1 button{
+    font-weight: bold;
+    display: block;
+}
+.form1 p{
+    margin-left: 10px;
+    text-decoration: underline;
+}
