@@ -38,18 +38,18 @@ class CompteEpargne extends Compte {
     }
 }
 class ComptePayant extends Compte {
-    private static $fraisOperation = 5;
+    private static $peration = 5;
     public function __construct($solde) {
         parent::__construct($solde);
     }
     public function deposer($montant){
-        if ($montant > self::$operation) {
-            $this->solde += $montant - self::$operation;
+        if ($montant > self::$peration) {
+            $this->solde += $montant - self::$peration;
         }
     }
     public function retirer($montant){
-        if ($montant + self::$operation <= $this->solde) {
-            $this->solde -= $montant + self::$operation;
+        if ($montant + self::$peration <= $this->solde) {
+            $this->solde -= $montant + self::$peration;
         }
     }
 }
