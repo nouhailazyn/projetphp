@@ -39,7 +39,7 @@ class Stagiaire {
     }
 }
 
-$stagiaire1 = new Stagiaire("EZ-ZAYANY", "Ghizlane", "DEV102");
+$stagiaire1 = new Stagiaire("ZYN", "Ghizlane", "DEV102");
 $stagiaire2 = new Stagiaire("EL-FASSI", "Nour", "DEV102");
 $stagiaire3 = new Stagiaire("EL-ALAOUI", "Leila", "DEV102");
 $stagiaire4 = new Stagiaire("OPHELIA", "Lorein", "DEV102");

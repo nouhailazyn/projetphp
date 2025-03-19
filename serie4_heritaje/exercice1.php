@@ -13,12 +13,12 @@ class Compte {
     public function __set($x, $y) {
         return $this->$x = $y;
     }
-    public function deposer($montant){
+    public function deposer($montant){// +
         if ($montant > 0) {
             $this->solde += $montant;
         }
     }
-    public function retirer($montant){
+    public function retirer($montant){// -
         if ($montant > 0 && $montant <= $this->solde) {
             $this->solde -= $montant;
         }
@@ -38,18 +38,18 @@ class CompteEpargne extends Compte {
     }
 }
 class ComptePayant extends Compte {
-    private static $fraisOperation = 5.0;
+    private static $fraisOperation = 5;
     public function __construct($solde) {
         parent::__construct($solde);
     }
     public function deposer($montant){
-        if ($montant > self::$fraisOperation) {
-            $this->solde += $montant - self::$fraisOperation;
+        if ($montant > self::$operation) {
+            $this->solde += $montant - self::$operation;
         }
     }
     public function retirer($montant){
-        if ($montant + self::$fraisOperation <= $this->solde) {
-            $this->solde -= $montant + self::$fraisOperation;
+        if ($montant + self::$operation <= $this->solde) {
+            $this->solde -= $montant + self::$operation;
         }
     }
 }
