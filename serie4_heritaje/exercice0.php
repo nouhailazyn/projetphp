@@ -27,9 +27,12 @@ class Stagiaire extends Personne {
         parent::__construct($nom, $prenom, $email, $tel);
         $this->groupe = $groupe;
     }
-    public function getGroupe(){ return $this->groupe; }
-    public function setGroupe($groupe){ $this->groupe = $groupe; }
-
+    public function getGroupe(){ 
+        return $this->groupe; 
+    }
+    public function setGroupe($groupe){ 
+        $this->groupe = $groupe; 
+    }
     public function __toString(){
         return parent::__toString() . ", Groupe: $this->groupe <br>";
     }
@@ -42,7 +45,7 @@ class Formateur extends Personne {
         $this->salaire = $salaire;
     }
     public function getSalaire(){ return $this->salaire; }
-    public function setSalaire(float $salaire){ $this->salaire = $salaire; }
+    public function setSalaire($salaire){ $this->salaire = $salaire; }
     public function __toString(){
         return parent::__toString() . ", Salaire: $this->salaire €";
     }

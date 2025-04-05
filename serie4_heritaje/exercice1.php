@@ -13,18 +13,14 @@ class Compte {
     public function __set($x, $y) {
         return $this->$x = $y;
     }
-    public function deposer($montant){// +
-        if ($montant > 0) {
-            $this->solde += $montant;
-        }
+    public function deposer($mnt){// +
+            $this->solde += $mnt;
     }
-    public function retirer($montant){// -
-        if ($montant > 0 && $montant <= $this->solde) {
-            $this->solde -= $montant;
-        }
+    public function retirer($mnt){// -
+            $this->solde -= $mnt;
     }
     public function __toString(){
-        return "Compte $this->code _Solde: $this->solde DH";
+        return "Compte $this->code - Solde: $this->solde DH";
     }
 }
 
