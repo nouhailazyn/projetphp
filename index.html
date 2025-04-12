@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des élèves</title>
+</head>
+<body>
+    <h1>Gestion des élèves</h1>
+    <form action="process.php" method="post">
+        <label for="action">Choisissez une action:</label><br>
+        <select name="action" id="action">
+            <option value="add">Ajouter</option>
+            <option value="display">Afficher</option>
+            <option value="search">Rechercher</option>
+            <option value="delete">Supprimer</option>
+            <option value="modify">Modifier</option>
+            <option value="save">Sauvegarder</option>
+            <option value="sort">Trier</option>
+        </select><br><br>
+
+        <!-- Form fields for adding or modifying an eleve -->
+        <div id="studentFields" style="display:none;">
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" id="nom"><br>
+            <label for="prenom">Prénom:</label>
+            <input type="text" name="prenom" id="prenom"><br>
+            <label for="age">Âge:</label>
+            <input type="text" name="age" id="age"><br>
+            <label for="filiere">Filière:</label>
+            <input type="text" name="filiere" id="filiere"><br><br>
+        </div>
+
+        <!-- Form fields for search, delete, and modify -->
+        <div id="codeField" style="display:none;">
+            <label for="code">Code:</label>
+            <input type="text" name="code" id="code"><br><br>
+        </div>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <script>
+        document.getElementById('action').addEventListener('change', function() {
+            const action = this.value;
+            const studentFields = document.getElementById('studentFields');
+            const codeField = document.getElementById('codeField');
+
+            // Show or hide relevant fields based on the action selected
+            if (action === 'add' || action === 'modify') {
+                studentFields.style.display = 'block';
+                codeField.style.display = 'none';
+            } else if (action === 'search' || action === 'delete') {
+                studentFields.style.display = 'none';
+                codeField.style.display = 'block';
+            } else {
+                studentFields.style.display = 'none';
+                codeField.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
