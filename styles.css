@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(91, 12, 147);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+}
+form{
+    
+    text-align: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin: 10rem;
+    padding: 20px;
+    
+    width: 20rem;
+    background-color: rgb(169, 137, 192);
+}
+input{
+    padding: 5px;
+    border: 1px solid wheat;
+    border-radius: 5px;
+}
+label{
+    color: rgb(49, 30, 62);
+}
+button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: rgb(49, 30, 62);
+    background-color: whitesmoke;
+    border: 1px solid rgb(49, 30, 62);
+}
+
+button:hover{
+    padding: 7px 12px;
+    color:  whitesmoke;
+    box-shadow: rgb(49, 30, 62) 0px -23px 25px 0px inset,
+                rgb(49, 30, 62) 0px -36px 30px 0px inset,
+                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+                rgba(0, 0, 0, 0.06) 0px 2px 1px,
+                rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}

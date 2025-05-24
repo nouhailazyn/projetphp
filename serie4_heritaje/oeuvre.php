@@ -26,7 +26,8 @@ class Peinture extends Oeuvre{
     }
     public function decrire(){
         parent::afficherInfos();
-        return "Cette peinture en {$this->technique} a été réalisée par {$this->artiste} en {$this->annee}<br>";    }
+        return `Cette peinture en {$this->technique} a été réalisée par {$this->artiste} en {$this->annee}<br>`;
+    }
 }
 class Sculpture extends Oeuvre{
     private $materiau;
@@ -36,7 +37,7 @@ class Sculpture extends Oeuvre{
     }
     public function decrire(){
         parent::afficherInfos();
-        return "Cette sculpture en {$this->materiau } a été créée par {$this->artiste}  en  {$this->annee} <br>";//here
+        return `Cette sculpture en {$this->materiau } a été créée par {$this->artiste}  en  {$this->annee} <br>`;//here
     }
 }
 $Oeuvres = [
